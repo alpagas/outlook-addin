@@ -36,7 +36,7 @@ namespace OAFramework.User
                     if (WindowsIdentity.GetCurrent() != null)
                     {
                         userName = WindowsIdentity.GetCurrent().Name ?? "UnknowUser";
-                        //userName = @"CIB\thinguyen";
+                        
                     }
                     else
                     {
