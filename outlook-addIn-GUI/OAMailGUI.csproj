@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF89675C-4027-42AB-BB90-DD9800A1EB92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FiMail_GUI</RootNamespace>
+    <AssemblyName>FiMail GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParties.Net\Framework\EntityFramework.6.1.3\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParties.Net\Log4Net\4.0\1.2.13\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContainerLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataContainer\ComboForm\ComboFieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataContainer\ComboForm\ComboFieldForm.Designer.cs">
+      <DependentUpon>ComboFieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\CheckDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\ComboDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\AmountDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\SmallDateDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\SmallTextDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\NumberDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\SmallComboDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\LinkDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\LabelDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\DateDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\DataUnitFactory.cs" />
+    <Compile Include="DataContainer\RootContainer\DataContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\DataContainer.Designer.cs">
+      <DependentUpon>DataContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\SmallDataContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\SmallDataContainer.Designer.cs">
+      <DependentUpon>SmallDataContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\LargeDataContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\LargeDataContainer.Designer.cs">
+      <DependentUpon>LargeDataContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\GenericDataContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\RootContainer\TechnicalDataContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataContainer\LeafContainer\TextDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FieldManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataContainer\ComboForm\ComboFieldForm.resx">
+      <DependentUpon>ComboFieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\CheckDataControl.resx">
+      <DependentUpon>CheckDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\ComboDataControl.resx">
+      <DependentUpon>ComboDataControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\AmountDataControl.resx">
+      <DependentUpon>AmountDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\SmallDateDataControl.resx">
+      <DependentUpon>SmallDateDataControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\SmallTextDataControl.resx">
+      <DependentUpon>SmallTextDataControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\NumberDataControl.resx">
+      <DependentUpon>NumberDataControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\SmallComboDataControl.resx">
+      <DependentUpon>SmallComboDataControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\LinkDataControl.resx">
+      <DependentUpon>LinkDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\LabelDataControl.resx">
+      <DependentUpon>LabelDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\DateDataControl.resx">
+      <DependentUpon>DateDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\RootContainer\SmallDataContainer.resx">
+      <DependentUpon>SmallDataContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\RootContainer\LargeDataContainer.resx">
+      <DependentUpon>LargeDataContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContainer\LeafContainer\TextDataControl.resx">
+      <DependentUpon>TextDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\outlook-addIn-framework\OAFramework.csproj">
+      <Project>{a88a518f-df02-444d-8ee8-f13bc03107c4}</Project>
+      <Name>OAFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

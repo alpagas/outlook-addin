@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A88A518F-DF02-444D-8EE8-F13BC03107C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OAFramework</RootNamespace>
+    <AssemblyName>OAFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParties.Net\Framework\EntityFramework.6.1.3\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParties.Net\Framework\EntityFramework.6.1.3\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\ThirdParties.Net\Log4Net\4.0\1.2.13\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackBone\BackBone.cs" />
+    <Compile Include="BackBone\BackBoneCheck.cs" />
+    <Compile Include="BackBone\BackBoneCombo.cs" />
+    <Compile Include="BackBone\BackBoneDate.cs" />
+    <Compile Include="BackBone\BackBoneText.cs" />
+    <Compile Include="BackBone\BackBoneLabel.cs" />
+    <Compile Include="BackBone\BackBoneLink.cs" />
+    <Compile Include="BackBone\BackBoneAmount.cs" />
+    <Compile Include="BackBone\BackBoneNumber.cs" />
+    <Compile Include="Configuration\ConnectionItem.cs" />
+    <Compile Include="Configuration\Section\DataBaseSection.cs" />
+    <Compile Include="Configuration\OADBManager.cs" />
+    <Compile Include="Configuration\Section\GlobalConfigurationSection.cs" />
+    <Compile Include="DataUnit\EFDataUnitNumber.cs" />
+    <Compile Include="DataUnit\EFDataUnitAmount.cs" />
+    <Compile Include="FieldComboValue\EFFieldComboValue.cs" />
+    <Compile Include="Mail\BackBoneMail.cs" />
+    <Compile Include="Mail\BackBoneMailGroup.cs" />
+    <Compile Include="Mail\EFMailGroup.cs" />
+    <Compile Include="Mail\IMail.cs" />
+    <Compile Include="Mail\MailManager.cs" />
+    <Compile Include="Migration\Configuration.cs" />
+    <Compile Include="DataField\EFDataField.cs" />
+    <Compile Include="DataField\EFDataFieldGroup.cs" />
+    <Compile Include="DataUnit\EFDataUnit.cs" />
+    <Compile Include="DataUnit\EFDataUnitCheck.cs" />
+    <Compile Include="DataUnit\EFDataUnitCombo.cs" />
+    <Compile Include="DataUnit\EFDataUnitDate.cs" />
+    <Compile Include="DataUnit\EFDataUnitText.cs" />
+    <Compile Include="Mail\EFMail.cs" />
+    <Compile Include="Template\EFTemplate.cs" />
+    <Compile Include="Template\EFTemplateFile.cs" />
+    <Compile Include="DataField\FieldControlConverter.cs" />
+    <Compile Include="Configuration\OAObjectsContext.cs" />
+    <Compile Include="Configuration\OAObjectsInitializer.cs" />
+    <Compile Include="DataUnit\IDataUnit.cs" />
+    <Compile Include="DataField\IField.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Configuration\TemplateEntityConfiguration.cs" />
+    <Compile Include="Template\TemplateManager.cs" />
+    <Compile Include="User\EFUserGroup.cs" />
+    <Compile Include="User\EFUser.cs" />
+    <Compile Include="User\UserManager.cs" />
+    <Compile Include="UtilsManager\UtilsManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
